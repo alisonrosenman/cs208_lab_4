@@ -10,10 +10,15 @@
 
 
 def calculate_errors(hyp, ref):
+    # First, pre-process the given sentences
+    hyp, ref = hyp.lower(), ref.lower()
     hyp, ref = hyp.split(), ref.split()
+
     errors = 0
+
     while len(hyp) > 1 and len(ref) > 1:
         if hyp[0] != ref[0]:
+            # Regardless of the error, add 1 to the total amount of errors.
             errors += 1
             if ref[0] in hyp[1:]:
                 hyp = hyp[1:]
@@ -34,6 +39,7 @@ def calculate_errors(hyp, ref):
             errors += (len(ref) - 1)
         else:
             errors += len(ref)
+    # Decrease the errors by since case overlaps.
     if (len(hyp) == len(ref)) and (hyp[0] != ref[0]):
         errors -= 1
     return errors
