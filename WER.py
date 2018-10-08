@@ -13,6 +13,7 @@ def calculate_errors(hyp, ref):
     # First, pre-process the given sentences
     hyp, ref = hyp.lower(), ref.lower()
     hyp, ref = hyp.split(), ref.split()
+    assert len(hyp) != 0 and len(ref) != 0
 
     errors = 0
 
