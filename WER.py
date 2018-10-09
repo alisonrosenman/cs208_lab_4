@@ -50,9 +50,9 @@ def calculate_errors(hyp, ref):
 
 ref1 = 'I want to see Pulp Fiction at Narberth Cinema at noon'
 ref2 = 'I want to see Inception at Bryn Mawr Film Institute at three PM'
-ref3 = ''
-ref4 = ''
-ref5 = ''
+ref3 = 'I want to see Forrest Gump at Bryn Mawr College Film Series'
+ref4 = 'I want to see Fight Club at seven PM'
+ref5 = 'I want to see Legally Blonde at Bryn Mawr Film Institute'
 
 # Enter total number of words for all of your reference sentences 
 test_total_words = len(ref1.split()) + len(ref2.split()) + len(ref3.split()) + len(ref4.split()) + len(ref5.split())
